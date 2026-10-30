@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//InnCapital Housing//Guia IA responsable y Copilot//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Puerto_Rico
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0400
+TZNAME:AST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ia-responsable-copilot-20261103@inncapital-guia
+DTSTAMP:20261030T132223Z
+DTSTART;TZID=America/Puerto_Rico:20261103T080000
+SUMMARY:IA responsable y Copilot — llegada 8:00\, inicio 8:30
+LOCATION:Puerto Rico Science\, Technology & Research Trust\, Innovation Cen
+ ter\, 2.º piso\, Salón T2\, 105 Carr. #21\, Km. 0.8\, Bo. Monacillo\, Sa
+ n Juan\, PR 00927
+GEO:18.3900462;-66.06806
+DESCRIPTION:Llegada y registro: 8:00 a. m. (hora de Puerto Rico). El adiest
+ ramiento comienza puntualmente a las 8:30 a. m. Hora de cierre por confirm
+ ar. Lugar: Innovation Center\, segundo piso\, Salón de Entrenamiento T2. 
+ En la entrada principal\, indica que vienes a un adiestramiento. Estaciona
+ miento gratuito. Organiza: InnCapital Housing. Adiestramiento por PRPS. Co
+ ntacto: Eraida Sanchez\, (939) 717-7063.
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

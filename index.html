@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#06122B">
+  <title>Guía para participantes · Taller de IA · Innovation Center</title>
+  <meta name="description" content="Cómo llegar al Innovation Center del Puerto Rico Science, Technology & Research Trust: rutas, estacionamiento y salón T2.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <div id="preview-banner" class="preview-banner" role="status" hidden>
+    <strong>VISTA PREVIA PRIVADA — faltan datos</strong>
+    <span id="preview-missing"></span>
+  </div>
+
+  <header class="hero" role="banner">
+    <div class="wrap">
+      <p class="eyebrow">Guía para participantes · Cómo llegar</p>
+      <h1 class="hero-title" id="hero-title">Cómo llegar al taller</h1>
+      <p class="hero-org" id="hero-org" hidden></p>
+      <p class="hero-lead">Todo lo que necesitas para llegar al <strong>Innovation Center</strong> del Puerto Rico Science, Technology &amp; Research Trust, en San Juan.</p>
+      <ul class="chips" aria-label="Ubicación del salón">
+        <li>Innovation Center</li><li>Segundo piso</li><li>Salón T2</li>
+      </ul>
+      <p class="hero-when" id="hero-when" hidden></p>
+      <a class="btn btn-primary btn-xl" id="btn-here" href="#" target="_blank" rel="noopener">Cómo llegar desde mi ubicación</a>
+    </div>
+  </header>
+
+  <nav class="quicknav" aria-label="Secciones">
+    <div class="wrap">
+      <a href="#video">Video</a><a href="#rutas">Rutas</a><a href="#estacionamiento">Estacionamiento</a><a href="#salon">Salón T2</a><a href="#contacto" data-requires="contact" hidden>Contacto</a>
+    </div>
+  </nav>
+
+  <main id="contenido">
+    <section id="video" class="section" aria-labelledby="video-h">
+      <div class="wrap">
+        <h2 id="video-h">Las cinco rutas, en video</h2>
+        <p class="section-lead">Mira en menos de un minuto cómo se llega al Innovation Center desde cada punto de partida. El video no tiene sonido.</p>
+        <div class="video-frame" id="video-frame">
+          <video id="route-video" controls playsinline muted preload="metadata" width="1920" height="1080" poster="assets/video-poster-1280.jpg"
+                 aria-label="Animación de las cinco rutas hacia el Innovation Center (sin sonido)"></video>
+          <div class="video-fallback" id="video-fallback" hidden>
+            <picture>
+              <source type="image/webp" srcset="assets/video-poster-640.webp 640w, assets/video-poster-1280.webp 1280w" sizes="(min-width: 1080px) 1040px, 100vw">
+              <img src="assets/video-poster-1280.jpg" srcset="assets/video-poster-640.jpg 640w, assets/video-poster-1280.jpg 1280w" sizes="(min-width: 1080px) 1040px, 100vw"
+                   alt="Mapa con cinco rutas que convergen en el Innovation Center" width="1280" height="720">
+            </picture>
+            <p>Video disponible próximamente</p>
+          </div>
+        </div>
+        <p class="video-credit" id="video-credit">Mapa: © colaboradores de OpenStreetMap, disponible bajo la Open Database License (ODbL 1.0) — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">openstreetmap.org/copyright</a>. Rutas calculadas con OSRM. Línea costera: GSHHG (Wessel &amp; Smith, LGPL). Límites municipales: <a href="https://whosonfirst.org/docs/licenses/" target="_blank" rel="noopener">Who's On First</a> / Quattroshapes (CC BY). Ruta sugerida, estimación sin tráfico; usa Google Maps o Waze para condiciones en vivo.</p>
+        <p class="video-alt" id="video-alt" hidden><a id="video-alt-link" href="#" target="_blank" rel="noopener">Ver el video en YouTube</a><span id="video-dl" hidden> · <a id="video-dl-link" href="#" download>Descargar el video (MP4, 12,5 MB)</a></span></p>
+        <p class="preview-only video-note" id="video-note" hidden></p>
+      </div>
+    </section>
+
+    <section id="rutas" class="section" aria-labelledby="rutas-h">
+      <div class="wrap">
+        <h2 id="rutas-h">Elige tu punto de partida</h2>
+        <p class="section-lead">Cada botón abre Google Maps con la ruta en auto y el tráfico del momento.</p>
+        <div class="cards" id="route-cards"></div>
+        <div class="here-card">
+          <div>
+            <h3>¿Sales de otro lugar?</h3>
+            <p>Google Maps calcula la ruta desde donde estés.</p>
+          </div>
+          <a class="btn btn-primary btn-xl" id="btn-here-2" href="#" target="_blank" rel="noopener">Cómo llegar desde mi ubicación</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="estacionamiento" class="section section-alt" aria-labelledby="parking-h">
+      <div class="wrap">
+        <h2 id="parking-h">Estacionamiento</h2>
+        <p data-field="parkingInfo" class="parking-info" hidden></p>
+        <ol class="lots" id="parking-lots" hidden></ol>
+        <p class="gate-tip" data-field="gateInstruction" hidden></p>
+        <p id="parking-pending" class="parking-info">Las instrucciones de estacionamiento se confirmarán antes del evento.</p>
+        <figure class="parking-figure" id="parking-figure" hidden>
+          <a id="parking-full" href="#" target="_blank" rel="noopener">
+            <picture>
+              <source id="parking-webp" type="image/webp">
+              <img id="parking-img" alt="" loading="lazy" decoding="async">
+            </picture>
+          </a>
+          <figcaption>
+            <span class="map-attr" id="parking-attr"></span>
+            <span class="fineprint" id="parking-credit"></span>
+          </figcaption>
+        </figure>
+        <div class="preview-box" id="parking-preview" hidden>
+          <p class="preview-box-h">Notas internas (solo vista previa):</p>
+          <ul id="parking-findings"></ul>
+        </div>
+        <div class="stack parking-actions">
+          <a class="btn btn-secondary btn-xl" id="btn-satellite" href="#" target="_blank" rel="noopener">Ver vista satelital en Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="horario" class="section" aria-labelledby="horario-h" data-requires="schedule" hidden>
+      <div class="wrap">
+        <h2 id="horario-h">Fecha y hora</h2>
+        <dl class="facts">
+          <div data-field-wrap="date" hidden><dt>Fecha</dt><dd data-field="date"></dd></div>
+          <div data-field-wrap="arrivalTime" hidden><dt>Llegada y registro</dt><dd data-field="arrivalTime"></dd></div>
+          <div data-field-wrap="startTime" hidden><dt>Comienza</dt><dd><span data-field="startTime"></span> <span class="dd-note">en punto</span></dd></div>
+        </dl>
+        <p class="arrival-tip" id="arrival-tip" hidden></p>
+        <p class="fineprint" id="tz-note" hidden></p>
+        <a class="btn btn-secondary btn-xl" id="btn-ics" href="#" download="IA-responsable-y-Copilot.ics" hidden>Añadir a mi calendario</a>
+      </div>
+    </section>
+
+    <section id="llegada" class="section" aria-labelledby="llegada-h">
+      <div class="wrap">
+        <h2 id="llegada-h">Los últimos metros</h2>
+        <p class="section-lead">Todas las rutas terminan igual. Sal con tiempo: el tráfico hacia San Juan puede variar.</p>
+        <ol class="steps">
+          <li><strong>Llega a la PR-21</strong> (Av. Ing. José “Kiko” Custodio), en el área de Centro Médico.</li>
+          <li><strong>Gira en el semáforo del Paseo de las Ciencias.</strong> Es a la derecha si vienes en dirección este y a la izquierda si vienes en dirección oeste.</li>
+          <li><strong>Poco después llegarás a la entrada principal</strong> del campus del Fideicomiso. <span data-field="gateInstruction" hidden></span></li>
+          <li><strong>Entra por la entrada del Innovation Center</strong> (mira la foto) y sube al segundo piso, al Salón de Entrenamiento T2.</li>
+        </ol>
+        <h3 class="photo-h" id="entrada-h">Entrada al edificio</h3>
+        <figure class="photo-figure" aria-labelledby="entrada-h">
+          <a href="assets/entrance-aerial-1600.jpg" target="_blank" rel="noopener" aria-label="Ver la foto aérea de la entrada en tamaño completo">
+            <picture>
+              <source media="(max-width: 640px)" type="image/webp" srcset="assets/entrance-aerial-crop-600.webp 600w, assets/entrance-aerial-crop-906.webp 906w" sizes="100vw">
+              <source media="(max-width: 640px)" type="image/jpeg" srcset="assets/entrance-aerial-crop-600.jpg 600w, assets/entrance-aerial-crop-906.jpg 906w" sizes="100vw">
+              <source type="image/webp" srcset="assets/entrance-aerial-1000.webp 1000w, assets/entrance-aerial-1600.webp 1600w" sizes="(min-width: 1080px) 1040px, 100vw">
+              <img id="entrance-img" src="assets/entrance-aerial-1000.jpg" srcset="assets/entrance-aerial-1000.jpg 1000w, assets/entrance-aerial-1600.jpg 1600w" sizes="(min-width: 1080px) 1040px, 100vw"
+                   width="1600" height="488" loading="lazy" decoding="async"
+                   alt="Vista aérea de la vía de acceso desde la PR-21. Una flecha roja señala la entrada del Innovation Center, en el edificio de la derecha.">
+            </picture>
+          </a>
+          <figcaption>La flecha roja señala la entrada al Innovation Center. Toca la foto para verla completa.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="salon" class="section section-alt" aria-labelledby="salon-h">
+      <div class="wrap">
+        <h2 id="salon-h">Dónde es el taller</h2>
+        <div class="room">
+          <div class="room-item"><span class="room-k">Edificio</span><span class="room-v">Innovation Center</span></div>
+          <div class="room-item"><span class="room-k">Piso</span><span class="room-v">Segundo piso</span></div>
+          <div class="room-item room-main"><span class="room-k">Salón</span><span class="room-v">T2</span><span class="room-s">Salón de Entrenamiento</span></div>
+        </div>
+        <figure class="photo-figure">
+          <a href="assets/room-t2-878.jpg" target="_blank" rel="noopener" aria-label="Ver la foto del Salón T2 en tamaño completo">
+            <picture>
+              <source type="image/webp" srcset="assets/room-t2-480.webp 480w, assets/room-t2-878.webp 878w" sizes="(min-width: 920px) 878px, 100vw">
+              <img id="room-img" src="assets/room-t2-480.jpg" srcset="assets/room-t2-480.jpg 480w, assets/room-t2-878.jpg 878w" sizes="(min-width: 920px) 878px, 100vw"
+                   width="878" height="602" loading="lazy" decoding="async"
+                   alt="Salón de Entrenamiento T2, con mesas en filas y sillas, en el segundo piso del Innovation Center.">
+            </picture>
+          </a>
+          <figcaption>Salón de Entrenamiento T2, segundo piso.</figcaption>
+        </figure>
+        <p class="fineprint">Ojo: el taller es en el <strong>T2</strong> (segundo piso), no en el T1 del primer piso ni en el Forward Center.</p>
+        <address class="addr">
+          Puerto Rico Science, Technology &amp; Research Trust<br>
+          105 Carr. #21, Km. 0.8, Bo. Monacillo<br>
+          San Juan, PR 00927
+        </address>
+      </div>
+    </section>
+
+    <section id="contacto" class="section" aria-labelledby="contacto-h" data-requires="contact" hidden>
+      <div class="wrap">
+        <h2 id="contacto-h">¿Necesitas ayuda?</h2>
+        <p class="section-lead">Comunícate con la organización del taller.</p>
+        <p class="contact-name" data-field="organizerName" hidden></p>
+        <div class="contact-actions">
+          <a class="btn btn-primary btn-xl" id="btn-call" href="#" hidden>Llamar</a>
+          <a class="btn btn-secondary btn-xl" id="btn-mail" href="#" hidden>Escribir un correo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <p>Puerto Rico Science, Technology &amp; Research Trust · Innovation Center · Salón T2</p>
+      <p class="fineprint">Las rutas se abren en Google Maps. Conduce con precaución y sigue las indicaciones del tránsito.</p>
+      <p class="fineprint" id="osm-attrib">Descripciones de rutas basadas en datos de <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a> (ODbL), calculadas con OSRM.</p>
+    </div>
+  </footer>
+</body>
+</html>
